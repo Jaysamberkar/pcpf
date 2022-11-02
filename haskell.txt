@@ -1,0 +1,85 @@
+//hello world 
+main = putStrLn "hello world"
+
+//Area of aquare using function & normal
+ area :: Int -> Int
+area x = x*x
+
+main = do 
+let a = 3
+putStrLn"Area of square is: "
+print(area a)
+
+let x=5
+putStrLn"area of square"
+print(x*x)
+
+//perimeter and area of rect using inputs 
+main = do
+putStrLn" enter length : "
+lin <- getLine
+let l = read lin :: Int  
+putStrLn"enter breadth"
+bin <- getLine
+let b = read bin :: Int 
+putStrLn"Area of rectangle is "
+print(l*b)
+putStrLn"perimeter of square is  "
+print(2*(l+b))
+
+//volume of sphere 
+
+volume::Float->Float
+volume r = (4*pi*r*r*r)/3
+
+main= do
+putStrLn"enter radius of sphere"
+rin <- getLine
+let r = read rin::Float 
+putStrLn"volume of sphere "
+print(volume r)
+
+//print list and operations 
+main = do
+
+let list1 = [1,2,3,4,5]
+print list1
+print (sum(list1))
+print(sum(filter odd(list1)))
+putStrLn " "
+print(sum(filter even(list1)))
+
+//factorial 
+fact :: Int -> Int 
+fact n|n==0=1
+fact n|n/=0=n*fact(n-1)
+
+main=do
+putStrLn"enter the number : "
+nin <- getLine
+let n =read nin::Int
+print(fact n)
+
+
+//higher order function REAPPLY
+reapply::(a->a)->a->a
+reapply f x = f(f x)
+
+sqr::Int->Int
+sqr x = x*x
+
+double::Int->Int
+double x = 2*x
+
+half::Float -> Float
+half x = x/2
+
+main = do
+putStrLn"Double applied twice on 7"
+print(reapply double 7)
+putStrLn"sqr applied twice on 7"
+print(reapply sqr 7)
+putStrLn"half applied twice on 7"
+print(reapply half 7)
+
+//higher order function MAP
