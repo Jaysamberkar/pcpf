@@ -1,0 +1,10 @@
+//area of square 
+calculate:-
+write('enter value'),
+read(L),
+Y is 4*L,
+print(Y).
+
+calculate.
+
+//area of rectangle 
